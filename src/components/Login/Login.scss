@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+*{
+  font-family: 'Nunito', sans-serif;
+
+}
+.loginPanel {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: #ccc;
+}
+.login {
+  padding: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ccc;
+  border-radius:10px;
+  width: 25%;
+  // height: 70%;
+  &__userField,
+  &__passField {
+    height: 3em;
+    width: 300px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin-bottom: 1em;
+    padding-left:10px;
+  }
+  &__passField {
+  }
+  &__btn {
+    height: 3em;
+    width: 200px;
+    border-radius: 30px;
+    border: 1px solid #00b894;
+    background-color: #00b894;
+    color:#fff;
+    font-size:18px;
+    outline:none;
+  }
+}
