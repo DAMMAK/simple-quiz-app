@@ -5,29 +5,35 @@ import "./Login.scss";
 class Login extends Component{
 
   state={
+    userData:{
     username:'',
-    password: ''
+    password: ''},
+    loginStatus:null
   }
   doLogin = e => {
     e.preventDefault();
+    console.log(this.state);
     let url ='http://localhost:5000/login'
-    axios.post(url,{...this.state}).then((res)=>{
+    axios.post(url,{...this.state.userData}).then((res)=>{
       console.log(res)
+    if(res.status === 200) this.setState({loginStatus:true})
     })
   };
 
   render(){
-
+    const success = this.state.loginStatus ? "Login Successful" : "";
      return (
     <div className="loginPanel">
+    
       <form onSubmit={this.doLogin} className="login">
+      <h3>{success}</h3>
         <div className="login__username">
           <input type="text" className="login__userField"
-           value={this.state.username} onChange={(e)=>this.setState({...this.state,username:e.target.value})} />
+           value={this.state.userData.username} onChange={(e)=>this.setState({userData:{username:e.target.value}})} />
         </div>
         <div className="login__password">
           <input type="password"  className="login__passField"
-          value={this.state.password} onChange={(e)=>this.setState({...this.state, password: e.target.value})} />
+          value={this.state.userData.password} onChange={(e)=>this.setState({ userData:{...this.state.userData, password: e.target.value}})} />
         </div>
         <button className="login__btn">Login</button>
       </form>

@@ -24,7 +24,7 @@ app.post("/login", (req, res, next) => {
     res.status(200).send({ message: "Login Successful" });
 });
 
-app.get("/loadQuestions", (req, res, next) => {
+app.get("/loadquestions", (req, res, next) => {
   res.send(questions).status(200);
 });
 app.listen(5000, () => console.log("Listening to Connection using PORT 5000"));
