@@ -10,7 +10,8 @@ class QA extends Component {
     this.previous = this.previous.bind(this);
     this.state = {
       questionData: [],
-      current: 0
+      current: 0,
+      ansQues: []
     };
   }
 
@@ -38,21 +39,27 @@ class QA extends Component {
       var question = this.state.questionData[this.state.current].ques;
     return (
       <div className="quiz">
-        <div className="question">{question}</div>
-
-        <div className="question_option">
-          <input type="radio" name="option" id="A" />
-          <span id="A">
-            {this.state.questionData.length > 0
-              ? this.state.questionData[this.state.current].options["A"]
-              : ""}
-          </span>
-          <input type="radio" name="option" id="B" />
-          <span id="B">
+        <div className="question">
+          <h3 class="question__title">{question}</h3>
+        </div>
+        <div className="option">
+          <div className="option__A">
+            <input type="radio" name="option" id="A" />
+            <label for="A">
+              {this.state.questionData.length > 0
+                ? this.state.questionData[this.state.current].options["A"]
+                : ""}
+            </label>
+          </div>
+          <div className="option__B">
+            <input type="radio" name="option" id="B" />
+            <label for="B">
             {this.state.questionData.length > 0
               ? this.state.questionData[this.state.current].options["B"]
               : ""}
-          </span>
+              </label>
+          </div>
+
         </div>
 
         <div className="navigation">
