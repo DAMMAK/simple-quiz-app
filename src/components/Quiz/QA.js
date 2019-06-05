@@ -18,12 +18,12 @@ class QA extends Component {
     };
   }
 
-  componentDidMount() {
-    // const question = await axios.get('http://localhost:5000/loadquestions')
-    // console.log(question.data);
-    // this.setState({questionData:question.data.questions});
+  async componentDidMount() {
+    const question = await axios.get('http://localhost:5000/loadquestions')
+    console.log(question.data);
+    this.setState({questionData:question.data.questions});
 
-    this.setState({ questionData: qs.questions });
+    // this.setState({ questionData: qs.questions });
 
     var element = document.querySelectorAll("input");
     // console.log(element);

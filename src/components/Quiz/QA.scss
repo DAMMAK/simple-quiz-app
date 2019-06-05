@@ -9,24 +9,31 @@
   margin: auto;
 }
 .option {
-  position: absolute;
-  left: 20%;
-  top: 35%;
+  // position: absolute;
+  // left: 20%;
+  // top: 35%;
+  margin-top: 4em;
   word-break: break-all;
+  max-width: 100%;
 }
 input[type="radio"] {
-  margin-bottom: 2em;
+  margin-bottom: 4em;
   overflow: auto;
+  display: none;
 }
 .option__A {
-  margin-left: 2em;
+  // margin-left: 2em;
 }
 .option__B {
   margin-left: 0em;
 }
 .navigation {
-  position: absolute;
-  bottom: 10%;
+  // position: absolute;
+  // bottom: 10%;
+  margin-top: 4em;
+  display: flex;
+  // position: fixed;
+  justify-content: space-evenly;
 
   &__previous {
     height: 3em;
@@ -35,6 +42,8 @@ input[type="radio"] {
     border: 1px solid #bb3a3a;
     background-color: #bb3a3a;
     outline: none;
+    color: #fff;
+    font-size: 18px;
   }
 
   &__next {
@@ -44,6 +53,8 @@ input[type="radio"] {
     border: 1px solid #027955;
     background-color: #027955;
     outline: none;
+    font-size: 18px;
+    color: #fff;
   }
 }
 
@@ -54,4 +65,19 @@ input[type="radio"] {
 .wrong {
   background-color: #bb3a3a;
   color: #fff;
+}
+
+label {
+  padding: 20px;
+  width: 90%;
+  display: block;
+  font-size: 22px;
+  display: inline-block;
+  border: 1px rgb(209, 26, 26) solid;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  text-align: left;
+}
+label:first-child {
+  margin-top: 10em;
 }

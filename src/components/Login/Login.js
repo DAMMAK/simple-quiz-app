@@ -32,7 +32,7 @@ class Login extends Component {
           <h3>{success}</h3>
           <div className="login__username">
             <input
-              type="text"
+              type="text" placeholder="Username"
               className="login__userField"
               value={this.state.userData.username}
               onChange={e =>
@@ -42,7 +42,7 @@ class Login extends Component {
           </div>
           <div className="login__password">
             <input
-              type="password"
+              type="password" placeholder="Password"
               className="login__passField"
               value={this.state.userData.password}
               onChange={e =>
