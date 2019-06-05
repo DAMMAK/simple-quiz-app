@@ -46,3 +46,12 @@ input[type="radio"] {
     outline: none;
   }
 }
+
+.correct {
+  background-color: #027955;
+  color: white;
+}
+.wrong {
+  background-color: #bb3a3a;
+  color: #fff;
+}
