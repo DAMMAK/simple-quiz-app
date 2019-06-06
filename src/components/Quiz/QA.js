@@ -74,11 +74,12 @@ class QA extends Component {
   }
 
   next() {
-        this.clearChecked();
         let keys = Object.keys(this.state.ansQues);
             console.log("keys", keys);
     if (this.state.current !== this.state.questionData.length - 1) {
       console.log(this.state);
+      this.clearChecked();
+
       let cur = this.state.current + 1;
        console.log(cur);
       if (keys.includes(cur.toString()) === true) {

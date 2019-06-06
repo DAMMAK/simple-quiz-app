@@ -9,7 +9,8 @@ class Login extends Component {
       username: "",
       password: ""
     },
-    loginStatus: null
+    loginStatus: null,
+    error: null
   };
   doLogin = e => {
     e.preventDefault();
@@ -20,19 +21,27 @@ class Login extends Component {
       if (res.status === 200) {
         this.setState({ loginStatus: true });
         this.props.history.push(`/quiz`);
-      }
+      } 
+      // if() {
+      //   this.setState({ loginStatus: false });
+      // }
     });
   };
 
   render() {
     const success = this.state.loginStatus ? "Login Successful" : "";
+    const error =
+      this.state.loginStatus === false ? "Wrong Username / Password" : "";
+
     return (
       <div className="loginPanel">
         <form onSubmit={this.doLogin} className="login">
           <h3>{success}</h3>
+          <h3>{error}</h3>
           <div className="login__username">
             <input
-              type="text" placeholder="Username"
+              type="text"
+              placeholder="Username"
               className="login__userField"
               value={this.state.userData.username}
               onChange={e =>
@@ -42,7 +51,8 @@ class Login extends Component {
           </div>
           <div className="login__password">
             <input
-              type="password" placeholder="Password"
+              type="password"
+              placeholder="Password"
               className="login__passField"
               value={this.state.userData.password}
               onChange={e =>

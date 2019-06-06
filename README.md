@@ -2,11 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-to start the project  
+to start the project
 
 `npm run dev`
 
-or 
+or
 
 `yarn dev`
 
@@ -14,10 +14,14 @@ to run the test cases
 
 `npm run server-test`
 
-or 
+or
 
 `yarn server-test`
 
+### Login Credential
+
+username: `DAMMAK`
+password: `Adedamola`
 
 the backend is in server directory
 the test script is in `__test__` directory
