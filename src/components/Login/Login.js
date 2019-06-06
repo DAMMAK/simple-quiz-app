@@ -21,10 +21,10 @@ class Login extends Component {
       if (res.status === 200) {
         this.setState({ loginStatus: true });
         this.props.history.push(`/quiz`);
-      } 
-      // if() {
-      //   this.setState({ loginStatus: false });
-      // }
+      }
+      if (res.status === 400) {
+        this.setState({ loginStatus: false });
+      }
     });
   };
 
