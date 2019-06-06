@@ -8,9 +8,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/", (req, res, next) => {
-  res.status(200).send({ message: questions });
+  // res.status(200).send({ message: questions });
   // console.log(questions);
   //   console.log(res.body);
+  res.status(200).send({ message: "Welcome to Quiz Application" });
 });
 
 app.post("/login", (req, res, next) => {
@@ -21,7 +22,7 @@ app.post("/login", (req, res, next) => {
   if (username !== "DAMMAK" || password !== "Adedamola")
     res.status(400).send({ message: "Wrong Username or Password" });
   if (username === "DAMMAK" && password === "Adedamola")
-    res.status(200).send({ message: "Login Successful" });
+    res.status(200).send({ username: "DAMMAK", password: "Adedamola" });
 });
 
 app.get("/loadquestions", (req, res, next) => {
