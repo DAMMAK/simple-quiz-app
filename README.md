@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Quiz Application Created with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -23,5 +23,5 @@ or
 username: `DAMMAK`
 password: `Adedamola`
 
-the backend is in server directory
+the backend is in server directory and
 the test script is in `__test__` directory
