@@ -25,18 +25,20 @@ class Login extends Component {
       if (res.status === 400) {
         this.setState({ loginStatus: false });
       }
-    });
+    }).catch((error)=>{
+     this.setState({ loginStatus: false });
+
+    })
   };
 
   render() {
-    const success = this.state.loginStatus ? "Login Successful" : "";
+    // const success = this.state.loginStatus ? "Login Successful" : "";
     const error =
       this.state.loginStatus === false ? "Wrong Username / Password" : "";
 
     return (
       <div className="loginPanel">
         <form onSubmit={this.doLogin} className="login">
-          <h3>{success}</h3>
           <h3>{error}</h3>
           <div className="login__username">
             <input

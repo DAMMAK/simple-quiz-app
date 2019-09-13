@@ -3,7 +3,12 @@
     {
       "id": 1,
       "ques": "How can you instantiate a class created with the class expression (e.g. class Foo{})?",
-      "options": { "A": "let x = new Foo();", "B": "let x = Foo();" },
+      "options": {
+        "A": "let x = new Foo();",
+        "B": "let x = Foo();",
+        "C": "A class cannot be instantiated -- classes are singleton entities.",
+        "D": ""
+      },
       "ans": "A"
     },
     {
@@ -11,7 +16,9 @@
       "ques": "How can you create a custom synthetic event?",
       "options": {
         "A": "var e = new Synthetic('build');",
-        "B": "var e = new Event('build');"
+        "B": "var e = new Event('build');",
+        "C": "",
+        "D": ""
       },
       "ans": "B"
     },
@@ -20,7 +27,9 @@
       "ques": "How can you instantiate a RegExp object?",
       "options": {
         "A": "There is no RegExp object in modern JavaScript; it is an experimental ES.Next feature",
-        "B": "With the constructor: new RegExp('^d+$'); or as a literal: /^d+$/"
+        "B": "With the constructor: new RegExp('^d+$'); or as a literal: /^d+$/",
+        "C": "",
+        "D": ""
       },
       "ans": "B"
     },
@@ -29,14 +38,21 @@
       "ques": "How can you find out if an object, Foo, 'inherited' from another object, Bar?",
       "options": {
         "A": "Using Foo.prototype.isPrototypeOf()",
-        "B": "A triple equals comparison will examine prototype chains; assert Foo === Bar is true"
+        "B": "A triple equals comparison will examine prototype chains; assert Foo === Bar is true",
+        "C": "Test Data 1",
+        "D": "Test Data 2"
       },
       "ans": "A"
     },
     {
       "id": 5,
       "ques": "What object can return a new object with the current browser time or a specified date and time?",
-      "options": { "A": "The Date() object", "B": "The DateTime() object" },
+      "options": {
+        "A": "The Date() object",
+        "B": "The DateTime() object",
+        "C": "",
+        "D": ""
+      },
       "ans": "A"
     }
   ]

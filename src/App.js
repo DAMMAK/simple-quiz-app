@@ -1,9 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Quiz from "./components/Quiz";
 import Login from "./components/Login/Login";
 import QA from "./components/Quiz/QA";
+import Result from "./components/Result/Result";
+
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <BrowserRouter>
         <Route path="/" exact component={Login} />
         <Route path="/quiz" component={QA} />
+        <Route path="/result" component={Result} />
+
       </BrowserRouter>
     </div>
   );

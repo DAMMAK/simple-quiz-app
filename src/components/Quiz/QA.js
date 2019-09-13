@@ -140,6 +140,22 @@ class QA extends Component {
                 : ""}
             </label>
           </div>
+          <div className="option__C">
+            <input type="radio" name="option" id="C" value="C" />
+            <label for="C">
+              {this.state.questionData.length > 0
+                ? this.state.questionData[this.state.current].options["C"]
+                : ""}
+            </label>
+          </div>
+          <div className="option__D">
+            <input type="radio" name="option" id="D" value="D" />
+            <label for="D">
+              {this.state.questionData.length > 0
+                ? this.state.questionData[this.state.current].options["D"]
+                : ""}
+            </label>
+          </div>
         </div>
 
         <div className="navigation">
